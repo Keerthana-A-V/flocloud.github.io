@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FLO Cloud API</title>
@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="css/style.css">    
 </head>
 
-<body data-theme="light" class="hide-completely">
+<body data-theme="light" class="hide-completely" onload="onLoadStartUp()">
     <sm-notifications id="notification_drawer"></sm-notifications>
     <audio id="notification_sound">
         <source src="https://rmservices.duckdns.org/files/notification-sound.mp3" type="audio/mpeg">
@@ -220,9 +220,7 @@
                 <div class="section__header">
                     <div class="grid">
                         <h3>Application Data</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
+                        <p>In this page we have Send Application Data,Request Application Data. </p>
                     </div>
                 </div><br>
                 <sm-carousel>
@@ -243,7 +241,7 @@
                     <h2>sendApplicationData</h2>
                     <p>
                       sendApplicationData sends application data to the cloud.
-                      <a onclick="displayPopUp('sendApplicationDataPopUp')"
+                      <a onclick="displayPopUp('sendApplicationDataPopUp')" class="read"
                         >Read more about sendApplicationData >></a
                       >
                     </p>
@@ -324,7 +322,7 @@
                     <h2>requestApplicationData</h2>
                     <p>
                       requestApplicationData requests application data from the cloud.
-                      <a onclick="displayPopUp('requestApplicationDataPopUp')"
+                      <a onclick="displayPopUp('requestApplicationDataPopUp')" class="read"
                         >Read more about requestApplicationData >></a
                       >
                     </p>
@@ -459,7 +457,7 @@
                    <br> <h2>sendGeneralData</h2>
                     <p>
                       sendGeneralData sends general data to the cloud.
-                      <a onclick="displayPopUp('sendGeneralDataPopUp')" 
+                      <a onclick="displayPopUp('sendGeneralDataPopUp')" class="read"
                         >Read more about sendGeneralData >></a
                       >
                     </p>
@@ -535,7 +533,7 @@
                     <h2>requestGeneralData</h2>
                     <p>
                       requestGeneralData requests application data from the cloud.
-                      <a onclick="displayPopUp('requestGeneralDataPopUp')"
+                      <a onclick="displayPopUp('requestGeneralDataPopUp')" class="read"
                         >Read more about requestGeneralData >></a
                       >
                     </p>
@@ -652,46 +650,35 @@
                     <div class="grid">
                         <h3>Object Data</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            In this page we have Reset Object Data, Update Object Data,Request Object Data.
                         </p>
                     </div>
-                    <sm-menu align-options="right">
-                        <menu-option>first option</menu-option>
-                        <menu-option>second option</menu-option>
-                        <menu-option>third option</menu-option>
-                    </sm-menu>
                 </div>
                 <sm-carousel>
                     <div class="card">
-                        <h3>Card</h3>
+                      <a href="#resetObjectDataBlock" class="smcrsl"><h3>Reset Object Data</h3></a>  
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officia.
+                            resetObjectData resets the objectData to cloud
                         </p>
                     </div>
                     <div class="card">
-                        <h3>Card</h3>
+                        <a href="#updateObjectDataBlock" class="smcrsl"> <h3>Update Object Data</h3></a>  
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officia.
+                            updateObjectData updates the objectData to cloud.
                         </p>
                     </div>
                     <div class="card">
-                        <h3>Card</h3>
+                        <a href="#requestObjectDataBlock" class="smcrsl">  <h3>Request Object Data</h3></a>  
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officia.
+                            requestObjectData requests application data from the cloud.
                         </p>
                     </div>
-                    <div class="card">
-                        <h3>Card</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, officia.
-                        </p>
-                    </div>
-                </sm-carousel>
+                </sm-carousel><br>
                 <div id="resetObjectDataBlock" class="descriptionBlocks">
                     <h2>resetObjectData</h2>
                     <p>
                       resetObjectData resets the objectData to cloud.
-                      <a onclick="displayPopUp('ObjectDataPopUp')"
+                      <a onclick="displayPopUp('ObjectDataPopUp')" class="read"
                         >Read more about resetObjectData >></a
                       >
                     </p>
@@ -783,13 +770,13 @@
                     <sm-button variant="primary" id="resetObjectData"
                       >Reset</sm-button
                     >
-                  </div>
+                  </div><br><br>
       
                   <div id="updateObjectDataBlock" class="descriptionBlocks">
                     <h2>updateObjectData</h2>
                     <p>
                       updateObjectData updates the objectData to cloud.
-                      <a onclick="displayPopUp('ObjectDataPopUp')"
+                      <a onclick="displayPopUp('ObjectDataPopUp')" class="read"
                         >Read more about updateObjectData >></a
                       >
                     </p>
@@ -882,13 +869,14 @@
                     <sm-button variant="primary" id="updateObjectData"
                       >Update</sm-button
                     >
-                  </div>
+                  </div><br><br>
       
-                  <div id="requestObjectDataBlock" class="descriptionBlocks">
+                  <div id="requestObjectDataBlock"
+                   class="descriptionBlocks">
                     <h2>requestObjectData</h2>
                     <p>
                       requestObjectData requests application data from the cloud.
-                      <a onclick="displayPopUp('requestObjectDataPopUp')"
+                      <a onclick="displayPopUp('requestObjectDataPopUp')" class="read"
                         >Read more about requestObjectData >></a
                       >
                     </p>
@@ -994,348 +982,13 @@
                       class="demo-inner-blocks upperVectorClock"></sm-input>
       
                     <sm-button variant="primary" id="requestObjectData">Request</sm-button>
-                  </div>
+                  </div><br><br><br>
             </section>
         </sm-tab-panels>
     </article>
     <script src="js/main_UI.js"></script>
     <script src="js/components.min.js"></script>
-<script>
-    let type;
-    
-    let userMessage;
-    let objectName;
-    let demo = [
-      "demoSendGeneralData",
-      "demoRequestGeneralData",
-      "demoSendApplicationData",
-      "demoRequestApplicationData",
-      "demoResetObjectData",
-      "demoUpdateObjectData",
-      "demoRequestObjectData",
-    ];
-    
-    // buttons
-    let sendUserMessage = document.getElementById("sendUserMessage");
-    let requestUserMessage = document.getElementById("requestUserMessage");
-    let resetObjectData = document.getElementById("resetObjectData");
-    let updateObjectData = document.getElementById("updateObjectData");
-    let requestObjectData = document.getElementById("requestObjectData");
-    let sendApplicationMessage = document.getElementById(
-      "sendApplicationMessage"
-    );
-    let requestApplicationMessage = document.getElementById(
-      "requestApplicationMessage"
-    );
-    
-    resetObjectData.addEventListener("clicked", () => {
-      console.log("sending message");
-    
-      resetData(demo[4]);
-      setObjectName(demo[4]);
-      let optionsObj = setOptions(demo[4]);
-    
-      let objName = generateObject("resetKeyValueBlock");
-    
-      floCloudAPI.resetObjectData(objName, optionsObj).then(
-        function (value) {
-          alert("successful");
-          displayCode(value, 4);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    updateObjectData.addEventListener("clicked", () => {
-      console.log("sending message");
-    
-      resetData(demo[5]);
-      setObjectName(demo[5]);
-      let optionsObj = setOptions(demo[5]);
-    
-      let objName = generateObject("updateKeyValueBlock");
-    
-      floCloudAPI.updateObjectData(objName, optionsObj).then(
-        function (value) {
-          alert("successful");
-          displayCode(value, 5);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    requestObjectData.addEventListener("clicked", () => {
-      console.log("sending message");
-    
-      resetData(demo[6]);
-      setObjectName(demo[6]);
-    
-      let optionsObj = setOptions(demo[6]);
-    
-      floCloudAPI.requestObjectData(objectName, optionsObj).then(
-        function (value) {
-          let result = floGlobals.appObjects[objectName];
-    
-          alert("successful");
-          displayCode(result, 6);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    sendApplicationMessage.addEventListener("clicked", () => {
-      console.log("sending message");
-    
-      resetData(demo[2]);
-    
-      setType(demo[2]);
-      setMessage(demo[2]);
-      let optionsObj = setOptions(demo[2]);
-    
-      floCloudAPI.sendApplicationData(userMessage, type, optionsObj).then(
-        function (value) {
-          alert("successful");
-          displayCode(value, 2);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    requestApplicationMessage.addEventListener("clicked", () => {
-      console.log("requesting message");
-    
-      resetData(demo[3]);
-      let optionsObj = setOptions(demo[3]);
-    
-      floCloudAPI.requestApplicationData(optionsObj).then(
-        function (value) {
-          alert("successful");
-          displayCode(value, 3);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    sendUserMessage.addEventListener("clicked", () => {
-      console.log("sending message");
-      resetData(demo[0]);
-      setType(demo[0]);
-      setMessage(demo[0]);
-    
-      let optionsObj = setOptions(demo[0]);
-    
-      floCloudAPI.sendGeneralData(userMessage, type, optionsObj).then(
-        function (value) {
-          alert("successful");
-          displayCode(value, 0);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    requestUserMessage.addEventListener("clicked", () => {
-      console.log("requesting message");
-      resetData(demo[1]);
-      setType(demo[1]);
-    
-      let optionsObj = setOptions(demo[1]);
-    
-      floCloudAPI.requestGeneralData(type, optionsObj).then(
-        function (value) {
-          alert("successful");
-    
-          displayCode(value, 1);
-        },
-        function (error) {
-          alert("unsuccessful");
-        }
-      );
-    });
-    
-    function displayCode(value, index) {
-      let demoBlock = document.querySelector("." + demo[index]);
-      let frag = document.createDocumentFragment();
-      let codeLabel = document.createElement("p");
-      let outputLabel = document.createElement("p");
-      let codeBlock = document.createElement("pre");
-      let outputBlock = document.createElement("pre");
-    
-      outputBlock.classList.add("scroll");
-      codeBlock.classList.add("scroll");
-      outputBlock.classList.add("demo-inner-blocks");
-      codeBlock.classList.add("demo-inner-blocks");
-    
-      codeLabel.innerHTML = "Code:";
-      outputLabel.innerHTML = "Output:";
-      outputBlock.innerHTML = JSON.stringify(value, undefined, 4);
-    
-      if (index == 0) {
-        codeBlock.innerHTML = `floCloudAPI.sendGeneralData("${userMessage}", "${type}")`;
-      } else if (index == 1) {
-        codeBlock.innerHTML = `floCloudAPI.requestGeneralData("${type}"")`;
-      } else if (index == 2) {
-        codeBlock.innerHTML = `floCloudAPI.sendApplicationData("${userMessage}", "${type}")`;
-      } else if (index == 3) {
-        codeBlock.innerHTML = `floCloudAPI.requestApplicationData()`;
-      } else if (index == 4) {
-        codeBlock.innerHTML = `floCloudAPI.resetObjectData("${objectName}")`;
-      } else if (index == 5) {
-        codeBlock.innerHTML = `floCloudAPI.updateObjectData("${objectName}")`;
-      } else if (index == 6) {
-        codeBlock.innerHTML = `floCloudAPI.requestObjectData("${objectName}")`;
-      }
-    
-      frag.appendChild(codeLabel);
-      frag.appendChild(codeBlock);
-      frag.appendChild(outputLabel);
-      frag.appendChild(outputBlock);
-    
-      demoBlock.appendChild(frag);
-    }
-    
-    function addKeyValuePairs(id, pairId, index) {
-      let keyValueBlock = document.getElementById(id);
-      let pairBlock = keyValueBlock.querySelector("#" + pairId);
-      let pairClone = pairBlock.cloneNode(true);
-      let plusBtn = pairBlock.querySelector(".plus");
-      let plusBtnNew = pairClone.querySelector(".plus");
-    
-      pairBlock.removeChild(plusBtn);
-      pairClone.setAttribute("id", "pair" + index);
-      plusBtnNew.setAttribute(
-        "onclick",
-        `addKeyValuePairs('${id}' ,'pair${index}', ${index + 1})`
-      );
-    
-      keyValueBlock.appendChild(pairClone);
-    }
-    
-    function generateObject(id) {
-      let keyValueBlock = document.getElementById(id);
-      let pairs = keyValueBlock.querySelectorAll(".pairs");
-      let objUser = objectName;
-      let obj = {};
-    
-      pairs.forEach((pair) => {
-        let key = pair.querySelector(".key").value;
-        let value = pair.querySelector(".value").value;
-    
-        obj[key] = value;
-      });
-    
-      floGlobals.appObjects[objUser] = obj;
-    
-      return objUser;
-    }
-    
-    function setType(blockID) {
-      let block = document.querySelector("." + blockID);
-      let messageType = block.querySelector(".messageType").value;
-    
-      console.log("type is ", messageType);
-    
-      if (!messageType) {
-        type = "type2";
-      } else {
-        type = messageType;
-      }
-    }
-    
-    function setMessage(blockID) {
-      let block = document.querySelector("." + blockID);
-      let message = block.querySelector(".message").value;
-    
-      if (!message) {
-        userMessage = "test message";
-      } else {
-        userMessage = message;
-      }
-    }
-    
-    function setObjectName(blockID) {
-      let block = document.querySelector("." + blockID);
-      let obj = block.querySelector(".objectName").value;
-    
-      if (!obj) {
-        objectName = "objTest";
-      } else {
-        objectName = obj;
-      }
-    }
-    
-    function setOptions(blockID) {
-      let block = document.querySelector("." + blockID);
-      let comment = block.querySelector(".comment").value;
-      let applicationName = block.querySelector(".applicationName").value;
-      let receiverID = block.querySelector(".receiverID").value;
-      let optionsType;
-      let atVectorClock, lowerVectorClock, upperVectorClock;
-      let optionsObj = {};
-    
-      if (
-        blockID == "demoRequestApplicationData" ||
-        blockID == "demoRequestGeneralData" ||
-        blockID == "demoRequestObjectData"
-      ) {
-        optionsType = block.querySelector(".typeName").value;
-        atVectorClock = block.querySelector(".atVectorClock").value;
-        lowerVectorClock = block.querySelector(".lowerVectorClock").value;
-        upperVectorClock = block.querySelector(".upperVectorClock").value;
-      }
-    
-      if (comment) {
-        optionsObj["comment"] = comment;
-      }
-    
-      if (applicationName) {
-        optionsObj["application"] = applicationName;
-      }
-    
-      if (receiverID) {
-        optionsObj["receiverID"] = applicationName;
-      }
-    
-      if (optionsType) {
-        optionsObj["Type"] = optionsType;
-      }
-    
-      return optionsObj;
-    }
-    
-    function resetData(blockID) {
-      let block = document.querySelector("." + blockID);
-      let p = block.querySelectorAll("p");
-      let pre = block.querySelectorAll("pre");
-    
-      if (p && pre) {
-        p.forEach((ele) => {
-          ele.innerHTML = "";
-        });
-    
-        pre.forEach((ele) => {
-          ele.innerHTML = "";
-        });
-      }
-    }
-    
-    function displayPopUp(id) {
-      let popUp = document.getElementById(id);
-    
-      popUp.show();
-    }
-    </script>
+    <script src="js/rscript.js"></script>
 <script id="floGlobals">
         /* Constants for FLO blockchain operations !!Make sure to add this at begining!! */
         const floGlobals = {
